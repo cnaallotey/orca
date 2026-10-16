@@ -1,0 +1,27 @@
+{
+  "name": "architecture-visualizer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.13.2",
+  "scripts": {
+    "lint": "eslint .",
+    "typecheck": "tsc -b",
+    "test": "vitest run",
+    "build": "pnpm -r run build",
+    "package:extension": "pnpm --filter vscode-architecture-visualizer run bundle && pnpm --filter vscode-architecture-visualizer exec vsce package --no-dependencies -o vscode-architecture-visualizer-0.1.0.vsix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/node": "^22.13.4",
+    "@vscode/vsce": "^4.0.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^9.20.1",
+    "prettier": "^3.5.1",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1",
+    "vitest": "^2.1.8"
+  }
+}

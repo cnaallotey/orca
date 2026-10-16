@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "0.1.0",
+  "project": {
+    "name": "full-app",
+    "commit": "test-commit",
+    "generatedAt": "2026-10-06T12:00:00.000Z"
+  },
+  "nodes": [
+    {
+      "id": "route_279a6326e00843ec",
+      "type": "route",
+      "label": "POST /api/users",
+      "source": {
+        "file": "server/api/users.post.ts",
+        "line": 1
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "serverApi",
+        "method": "POST",
+        "path": "/api/users"
+      }
+    },
+    {
+      "id": "route_686d7762a8ffd272",
+      "type": "route",
+      "label": "/checkout",
+      "source": {
+        "file": "pages/checkout.vue",
+        "line": 5
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "page",
+        "method": "GET",
+        "path": "/checkout"
+      }
+    },
+    {
+      "id": "route_9b113a7849e434fa",
+      "type": "route",
+      "label": "/api/users",
+      "source": {
+        "file": "server/api/users.ts",
+        "line": 1
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "serverApi",
+        "method": "ALL",
+        "path": "/api/users"
+      }
+    },
+    {
+      "id": "route_cd205934b38bc1bd",
+      "type": "route",
+      "label": "/",
+      "source": {
+        "file": "pages/index.vue",
+        "line": 5
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "page",
+        "method": "GET",
+        "path": "/"
+      }
+    },
+    {
+      "id": "externalApi_ca25e1f42a2e5d80",
+      "type": "externalApi",
+      "label": "api.stripe.com",
+      "source": {
+        "file": "pages/checkout.vue",
+        "line": 6
+      },
+      "origin": "detected",
+      "meta": {
+        "host": "api.stripe.com",
+        "sampleUrl": "https://api.stripe.com/v1/charges"
+      }
+    },
+    {
+      "id": "database_c60af83e6c3808aa",
+      "type": "database",
+      "label": "PostgreSQL",
+      "source": {
+        "file": "prisma/schema.prisma",
+        "line": 1
+      },
+      "origin": "detected",
+      "meta": {
+        "provider": "PostgreSQL",
+        "schemaFile": "prisma/schema.prisma"
+      }
+    },
+    {
+      "id": "database_b34b8c7d7ab14529",
+      "type": "database",
+      "label": "User Table",
+      "source": {
+        "file": "prisma/schema.prisma",
+        "line": 6
+      },
+      "origin": "detected",
+      "meta": {
+        "kind": "model",
+        "model": "User",
+        "database": "PostgreSQL"
+      }
+    },
+    {
+      "id": "env_965acefbfb92377f",
+      "type": "env",
+      "label": "DATABASE_URL",
+      "source": {
+        "file": ".env.example",
+        "line": 1
+      },
+      "origin": "detected",
+      "meta": {
+        "varName": "DATABASE_URL",
+        "definedIn": ".env.example"
+      }
+    },
+    {
+      "id": "env_678c330757055b1b",
+      "type": "env",
+      "label": "STRIPE_SECRET_KEY",
+      "source": {
+        "file": ".env.example",
+        "line": 2
+      },
+      "origin": "detected",
+      "meta": {
+        "varName": "STRIPE_SECRET_KEY",
+        "definedIn": ".env.example"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_9ea948e6dc85bc1b",
+      "from": "route_686d7762a8ffd272",
+      "to": "externalApi_ca25e1f42a2e5d80",
+      "kind": "calls",
+      "origin": "detected",
+      "confidence": 0.9
+    },
+    {
+      "id": "edge_890462ba72184974",
+      "from": "route_cd205934b38bc1bd",
+      "to": "route_279a6326e00843ec",
+      "kind": "calls",
+      "origin": "detected",
+      "confidence": 1
+    },
+    {
+      "id": "edge_11475c790ad056e1",
+      "from": "database_c60af83e6c3808aa",
+      "to": "database_b34b8c7d7ab14529",
+      "kind": "imports",
+      "origin": "detected",
+      "confidence": 1
+    },
+    {
+      "id": "edge_0adec5d39c01703b",
+      "from": "route_279a6326e00843ec",
+      "to": "database_b34b8c7d7ab14529",
+      "kind": "writes",
+      "origin": "detected",
+      "confidence": 1
+    },
+    {
+      "id": "edge_9881f72137f335b0",
+      "from": "route_9b113a7849e434fa",
+      "to": "database_b34b8c7d7ab14529",
+      "kind": "reads",
+      "origin": "detected",
+      "confidence": 1
+    },
+    {
+      "id": "edge_56839a1dcb511a21",
+      "from": "route_9b113a7849e434fa",
+      "to": "env_965acefbfb92377f",
+      "kind": "reads",
+      "origin": "detected",
+      "confidence": 1
+    }
+  ],
+  "overrides": {
+    "hiddenNodeIds": [],
+    "hiddenEdgeIds": []
+  }
+}

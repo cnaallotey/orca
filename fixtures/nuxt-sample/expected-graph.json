@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "0.1.0",
+  "project": {
+    "name": "nuxt-sample",
+    "commit": "test-commit",
+    "generatedAt": "2026-10-06T12:00:00.000Z"
+  },
+  "nodes": [
+    {
+      "id": "route_005bd67089355fde",
+      "type": "route",
+      "label": "/users/:id",
+      "source": {
+        "file": "pages/users/[id].vue",
+        "line": 1
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "page",
+        "method": "GET",
+        "path": "/users/:id"
+      }
+    },
+    {
+      "id": "route_279a6326e00843ec",
+      "type": "route",
+      "label": "POST /api/users",
+      "source": {
+        "file": "server/api/users.post.ts",
+        "line": 3
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "serverApi",
+        "method": "POST",
+        "path": "/api/users"
+      }
+    },
+    {
+      "id": "route_9653c4a7730f4e6e",
+      "type": "route",
+      "label": "/about",
+      "source": {
+        "file": "pages/about.vue",
+        "line": 1
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "page",
+        "method": "GET",
+        "path": "/about"
+      }
+    },
+    {
+      "id": "route_9b113a7849e434fa",
+      "type": "route",
+      "label": "/api/users",
+      "source": {
+        "file": "server/api/users.ts",
+        "line": 3
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "serverApi",
+        "method": "ALL",
+        "path": "/api/users"
+      }
+    },
+    {
+      "id": "route_cd205934b38bc1bd",
+      "type": "route",
+      "label": "/",
+      "source": {
+        "file": "pages/index.vue",
+        "line": 1
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "page",
+        "method": "GET",
+        "path": "/"
+      }
+    },
+    {
+      "id": "route_ecb5516a7e5d8232",
+      "type": "route",
+      "label": "/health",
+      "source": {
+        "file": "server/routes/health.ts",
+        "line": 3
+      },
+      "origin": "detected",
+      "meta": {
+        "routeType": "serverRoute",
+        "method": "ALL",
+        "path": "/health"
+      }
+    }
+  ],
+  "edges": [],
+  "overrides": {
+    "hiddenNodeIds": [],
+    "hiddenEdgeIds": []
+  }
+}

@@ -1,0 +1,31 @@
+# Tasks
+
+- [x] Step 1: Set up the monorepo <!-- id: 0 -->
+  - [x] Check environment and toolchain (node, pnpm) <!-- id: 1 -->
+  - [x] Write spec.md and agent.md to workspace root <!-- id: 2 -->
+  - [x] Create pnpm workspace structure: packages/core, packages/analyzer, packages/viewer, apps/extension, fixtures, docs <!-- id: 3 -->
+  - [x] Configure shared TypeScript with strict mode, ESLint, Prettier, Vitest <!-- id: 4 -->
+  - [x] Add root scripts: lint, typecheck, test, build <!-- id: 5 -->
+  - [x] Run and verify lint, typecheck, test, build on empty setup <!-- id: 6 -->
+- [x] Step 2: Plan the work (write docs/status.md for M0) <!-- id: 7 -->
+- [x] Step 3: Build in order acting as owning agents <!-- id: 8 -->
+  - [x] Schema Guardian (packages/core) <!-- id: 9 -->
+  - [x] Analyzer Engineer (packages/analyzer) <!-- id: 10 -->
+  - [x] QA Engineer (fixtures/) <!-- id: 11 -->
+  - [x] Viewer Engineer (packages/viewer) <!-- id: 12 -->
+  - [x] Extension Engineer (apps/extension) <!-- id: 13 -->
+  - [x] Reviewer <!-- id: 14 -->
+- [x] Package M0 Extension as .vsix <!-- id: 15 -->
+  - [x] Robust WASM path resolution in parser and scanner <!-- id: 16 -->
+  - [x] Configure extension bundling script with esbuild and asset copy <!-- id: 17 -->
+  - [x] Update apps/extension/package.json, README.md, and .vscodeignore for VSIX packaging <!-- id: 18 -->
+  - [x] Package .vsix using vsce and verify file contents <!-- id: 19 -->
+  - [x] Run full test suite, lint, format check, and typecheck <!-- id: 20 -->
+- [ ] Milestone M1: Core MVP <!-- id: 21 -->
+  - [x] Task M1.1: Schema Guardian — Overrides schema & helpers (packages/core) <!-- id: 22 -->
+  - [x] Task M1.2: Analyzer Engineer — HTTP client detector & route resolution (packages/analyzer) <!-- id: 23 -->
+  - [x] Task M1.3: Analyzer Engineer — Data access & environment detectors (packages/analyzer) <!-- id: 24 -->
+  - [x] Task M1.4: QA Engineer — Multi-detector fixture & golden tests (fixtures/, packages/analyzer) <!-- id: 25 -->
+  - [x] Task M1.5: Viewer Engineer — Search, filtering & manual edit events (packages/viewer) <!-- id: 26 -->
+  - [x] Task M1.6: Extension Engineer — Export JSON, Open Graph & persistent overrides (apps/extension) <!-- id: 27 -->
+  - [/] Task M1.7: Reviewer — M1 verification & updated .vsix packaging <!-- id: 28 -->

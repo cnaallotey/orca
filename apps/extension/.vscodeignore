@@ -1,0 +1,16 @@
+.vscode/**
+src/**
+scripts/**
+tsconfig.json
+tsconfig.*.json
+*.tsbuildinfo
+vitest.config.ts
+**/*.test.*
+**/__mocks__/**
+node_modules/**
+.DS_Store
+dist/*.d.ts
+dist/*.d.ts.map
+dist/*.js
+dist/*.js.map
+dist/*.cjs.map

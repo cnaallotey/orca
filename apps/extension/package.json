@@ -1,0 +1,56 @@
+{
+  "name": "vscode-architecture-visualizer",
+  "displayName": "Architecture Visualizer",
+  "description": "Interactive architecture visualization and route exploration for Nuxt repos in VS Code",
+  "version": "0.1.0",
+  "publisher": "arch-viz",
+  "type": "module",
+  "main": "./dist/extension.cjs",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arch-viz/architecture-visualizer"
+  },
+  "activationEvents": [
+    "onCommand:architecture.scanWorkspace",
+    "onCommand:architecture.openGraph",
+    "onCommand:architecture.exportJson"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "architecture.scanWorkspace",
+        "title": "Architecture: Scan Workspace"
+      },
+      {
+        "command": "architecture.openGraph",
+        "title": "Architecture: Open Graph"
+      },
+      {
+        "command": "architecture.exportJson",
+        "title": "Architecture: Export JSON"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -b && node scripts/bundle.mjs",
+    "bundle": "node scripts/bundle.mjs",
+    "package": "vsce package --no-dependencies",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@arch-viz/analyzer": "workspace:*",
+    "@arch-viz/core": "workspace:*",
+    "@arch-viz/viewer": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.88.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@arch-viz/viewer",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@arch-viz/core": "workspace:*",
+    "cytoscape": "^3.34.3"
+  },
+  "devDependencies": {
+    "@types/cytoscape": "^3.31.0"
+  }
+}
